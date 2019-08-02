@@ -6,13 +6,14 @@
     <script src="https://js.stripe.com/v2/"></script>
     <script>
         //<![DATA[
-        Stripe.publishablekey = '{{ publishable }}';
+        Stripe.publishablekey = '{{ publishable_key }}';
         //]]
     </script>
     <script src="{% static 'js/stripe.js' %}"></script>
-{% endblock %}
+{% endblock head_js %}
 
 {% block content %}
+
 <div class="row row-flex">
     {% for item in cart_items %}
 
